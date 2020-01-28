@@ -8,4 +8,6 @@ The web application has been developed using the following technologies and API:
   - react-grid-system
   - Bulma
   - OpenWeatherMap API
+
+![app-screenshot](bin/weather-app.png)
   
