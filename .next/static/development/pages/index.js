@@ -11,8 +11,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "C:\\Users\\Yoh Zhi Ying\\Desktop\\weather-app\\components\\CurrentWeather.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -25,82 +25,83 @@ var CurrentWeather = function CurrentWeather(_ref) {
       feels_like = _ref.feels_like,
       humidity = _ref.humidity,
       highTemp = _ref.highTemp,
-      lowTemp = _ref.lowTemp;
+      lowTemp = _ref.lowTemp,
+      country = _ref.country;
   return __jsx("section", {
     className: "hero is-info is-bold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     },
     __self: this
   }, __jsx("div", {
     className: "hero-body",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 16
     },
     __self: this
   }, __jsx("h1", {
     className: "has-text-centered is-family-sans-serif has-text-weight-bold has-text-black is-size-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 17
     },
     __self: this
   }, "Current Weather"), __jsx("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
   }, __jsx("h1", {
     className: "is-size-3 has-text-centered is-family-sans-serif subtitle has-text-black",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: this
   }, Math.round(temperature), "\xB0C")), __jsx("h2", {
     className: "is-size-4 is-capitalized has-text-centered is-family-sans-serif has-text-weight-medium has-text-black",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
   }, description), __jsx("h3", {
     className: "is-family-sans-serif has-text-dark has-text-centered",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: this
-  }, city), __jsx("h5", {
+  }, city, ", ", country), __jsx("h5", {
     className: "is-family-sans-serif has-text-centered",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     },
     __self: this
   }, "Feels like: ", Math.round(feels_like), "\xB0C | Humidity: ", humidity), __jsx("div", {
     className: "has-text-centered",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 34
     },
     __self: this
   }, __jsx("span", {
     className: "is-family-sans-serif",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
   }, Math.round(lowTemp), "\xB0"), " ", "/", " ", __jsx("span", {
     className: "is-family-sans-serif",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 39
     },
     __self: this
   }, Math.round(highTemp), "\xB0C"))));
@@ -121,8 +122,8 @@ var CurrentWeather = function CurrentWeather(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "C:\\Users\\Yoh Zhi Ying\\Desktop\\weather-app\\components\\SearchCity.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -196,10 +197,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_grid_system__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-grid-system */ "./node_modules/react-grid-system/build/index.js");
-/* harmony import */ var react_grid_system__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_grid_system__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_grid_system__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-grid-system */ "./node_modules/react-grid-system/build/index.js");
+/* harmony import */ var react_grid_system__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_grid_system__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
@@ -225,7 +226,7 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(WeatherInfo, [{
     key: "render",
     value: function render() {
-      return __jsx(react_grid_system__WEBPACK_IMPORTED_MODULE_7__["Col"], {
+      return __jsx(react_grid_system__WEBPACK_IMPORTED_MODULE_6__["Col"], {
         lg: 2,
         className: "has-text-centered is-family-sans-serif weather-info",
         __source: {
@@ -237,60 +238,88 @@ function (_React$Component) {
         className: "is-size-6 has-text-weight-bold",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 12
         },
         __self: this
       }, this.props.date), __jsx("div", {
         className: "weather-icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 13
         },
         __self: this
       }, __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 14
         },
         __self: this
       }, __jsx("img", {
         src: "http://openweathermap.org/img/wn/".concat(this.props.icon, "@2x.png"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 15
         },
         __self: this
       }))), __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 20
         },
         __self: this
       }, __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 21
         },
         __self: this
       }, Math.round(this.props.minTemp), "\xB0"), " /", " ", __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 22
         },
         __self: this
       }, Math.round(this.props.maxTemp), "\xB0C")), __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 24
         },
         __self: this
-      }, "Humidity: ", this.props.humidity), __jsx("div", {
+      }, __jsx("h5", {
+        className: "has-text-weight-semibold",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 25
         },
         __self: this
-      }, "Weather: ", this.props.description));
+      }, "Humidity:", __jsx("span", {
+        className: "is-normal",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
+      }, this.props.humidity))), __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      }, __jsx("h5", {
+        className: "has-text-weight-semibold",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31
+        },
+        __self: this
+      }, "Weather: "), __jsx("p", {
+        className: "is-capitalized",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
+        },
+        __self: this
+      }, this.props.description)));
     }
   }]);
 
@@ -375,17 +404,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/get-prototype
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/set-prototype-of */ "./node_modules/core-js/library/fn/object/set-prototype-of.js");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/parse-int.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/parse-int */ "./node_modules/core-js/library/fn/parse-int.js");
 
 /***/ }),
 
@@ -2829,19 +2847,6 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/fn/parse-int.js":
-/*!******************************************************!*\
-  !*** ./node_modules/core-js/library/fn/parse-int.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ../modules/es6.parse-int */ "./node_modules/core-js/library/modules/es6.parse-int.js");
-module.exports = __webpack_require__(/*! ../modules/_core */ "./node_modules/core-js/library/modules/_core.js").parseInt;
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/fn/set.js":
 /*!************************************************!*\
   !*** ./node_modules/core-js/library/fn/set.js ***!
@@ -4380,26 +4385,6 @@ module.exports = function (KEY, exec) {
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/modules/_parse-int.js":
-/*!************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_parse-int.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var $parseInt = __webpack_require__(/*! ./_global */ "./node_modules/core-js/library/modules/_global.js").parseInt;
-var $trim = __webpack_require__(/*! ./_string-trim */ "./node_modules/core-js/library/modules/_string-trim.js").trim;
-var ws = __webpack_require__(/*! ./_string-ws */ "./node_modules/core-js/library/modules/_string-ws.js");
-var hex = /^[-+]?0[xX]/;
-
-module.exports = $parseInt(ws + '08') !== 8 || $parseInt(ws + '0x16') !== 22 ? function parseInt(str, radix) {
-  var string = $trim(String(str), 3);
-  return $parseInt(string, (radix >>> 0) || (hex.test(string) ? 16 : 10));
-} : $parseInt;
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/modules/_property-desc.js":
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/library/modules/_property-desc.js ***!
@@ -4656,60 +4641,6 @@ module.exports = function (TO_STRING) {
       : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
   };
 };
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/_string-trim.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_string-trim.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
-var defined = __webpack_require__(/*! ./_defined */ "./node_modules/core-js/library/modules/_defined.js");
-var fails = __webpack_require__(/*! ./_fails */ "./node_modules/core-js/library/modules/_fails.js");
-var spaces = __webpack_require__(/*! ./_string-ws */ "./node_modules/core-js/library/modules/_string-ws.js");
-var space = '[' + spaces + ']';
-var non = '\u200b\u0085';
-var ltrim = RegExp('^' + space + space + '*');
-var rtrim = RegExp(space + space + '*$');
-
-var exporter = function (KEY, exec, ALIAS) {
-  var exp = {};
-  var FORCE = fails(function () {
-    return !!spaces[KEY]() || non[KEY]() != non;
-  });
-  var fn = exp[KEY] = FORCE ? exec(trim) : spaces[KEY];
-  if (ALIAS) exp[ALIAS] = fn;
-  $export($export.P + $export.F * FORCE, 'String', exp);
-};
-
-// 1 -> String#trimLeft
-// 2 -> String#trimRight
-// 3 -> String#trim
-var trim = exporter.trim = function (string, TYPE) {
-  string = String(defined(string));
-  if (TYPE & 1) string = string.replace(ltrim, '');
-  if (TYPE & 2) string = string.replace(rtrim, '');
-  return string;
-};
-
-module.exports = exporter;
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/_string-ws.js":
-/*!************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_string-ws.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = '\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003' +
-  '\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF';
 
 
 /***/ }),
@@ -5127,21 +5058,6 @@ $export($export.S, 'Object', { setPrototypeOf: __webpack_require__(/*! ./_set-pr
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es6.parse-int.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es6.parse-int.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
-var $parseInt = __webpack_require__(/*! ./_parse-int */ "./node_modules/core-js/library/modules/_parse-int.js");
-// 18.2.5 parseInt(string, radix)
-$export($export.G + $export.F * (parseInt != $parseInt), { parseInt: $parseInt });
 
 
 /***/ }),
@@ -9434,30 +9350,27 @@ try {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Index; });
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_grid_system__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-grid-system */ "./node_modules/react-grid-system/build/index.js");
-/* harmony import */ var react_grid_system__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_grid_system__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _components_WeatherInfo__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/WeatherInfo */ "./components/WeatherInfo.js");
-/* harmony import */ var _components_CurrentWeather__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/CurrentWeather */ "./components/CurrentWeather.js");
-/* harmony import */ var _components_SearchCity__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/SearchCity */ "./components/SearchCity.js");
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_15__);
-
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react_grid_system__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-grid-system */ "./node_modules/react-grid-system/build/index.js");
+/* harmony import */ var react_grid_system__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_grid_system__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _components_WeatherInfo__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/WeatherInfo */ "./components/WeatherInfo.js");
+/* harmony import */ var _components_CurrentWeather__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/CurrentWeather */ "./components/CurrentWeather.js");
+/* harmony import */ var _components_SearchCity__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/SearchCity */ "./components/SearchCity.js");
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_14__);
 
 
 
@@ -9466,7 +9379,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "C:\\Users\\Yoh Zhi Ying\\Desktop\\weather-app\\pages\\index.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 
 
 
@@ -9479,36 +9392,36 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
 var Index =
 /*#__PURE__*/
 function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__["default"])(Index, _React$Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(Index, _React$Component);
 
   function Index(props) {
     var _this;
 
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Index);
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Index);
 
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Index).call(this, props));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Index).call(this, props));
     _this.apikey = "b71deb2566d82e77a5e670d0d3771d2a";
     _this.apiurl = "http://api.openweathermap.org/data/2.5";
     _this.state = {
       activeCity: "Kuala Lumpur",
       data: null
     };
-    _this.APIRequest = _this.APIRequest.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this));
-    _this.retrieveData = _this.retrieveData.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this));
-    _this.submitHandler = _this.submitHandler.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this));
-    _this.changeHandler = _this.changeHandler.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this));
+    _this.APIRequest = _this.APIRequest.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this));
+    _this.retrieveData = _this.retrieveData.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this));
+    _this.submitHandler = _this.submitHandler.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this));
+    _this.changeHandler = _this.changeHandler.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this));
     return _this;
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(Index, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Index, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.async(function componentDidMount$(_context) {
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function componentDidMount$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(this.APIRequest(this.state.activeCity));
+              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(this.APIRequest(this.state.activeCity));
 
             case 2:
             case "end":
@@ -9523,13 +9436,13 @@ function (_React$Component) {
       var _this2 = this;
 
       var forecastUrl, weatherUrl;
-      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.async(function APIRequest$(_context2) {
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function APIRequest$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
               forecastUrl = "".concat(this.apiurl, "/forecast?q=").concat(cityName, "&units=metric&appid=").concat(this.apikey);
               _context2.next = 3;
-              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(axios__WEBPACK_IMPORTED_MODULE_9___default.a.get(forecastUrl).then(function (res) {
+              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(axios__WEBPACK_IMPORTED_MODULE_8___default.a.get(forecastUrl).then(function (res) {
                 _this2.retrieveData(res.data.list);
               })["catch"](function (error) {
                 console.log(error);
@@ -9537,7 +9450,7 @@ function (_React$Component) {
 
             case 3:
               weatherUrl = "".concat(this.apiurl, "/weather?q=").concat(cityName, "&units=metric&appid=").concat(this.apikey);
-              axios__WEBPACK_IMPORTED_MODULE_9___default.a.get(weatherUrl).then(function (res) {
+              axios__WEBPACK_IMPORTED_MODULE_8___default.a.get(weatherUrl).then(function (res) {
                 var detail = res.data;
 
                 _this2.setState({
@@ -9547,7 +9460,8 @@ function (_React$Component) {
                   feels_like: detail.main.feels_like,
                   humidity: detail.main.humidity,
                   highTemp: detail.main.temp_max,
-                  lowTemp: detail.main.temp_min
+                  lowTemp: detail.main.temp_min,
+                  country: detail.sys.country
                 });
               });
 
@@ -9558,17 +9472,16 @@ function (_React$Component) {
         }
       }, null, this);
     }
+    /* Display date in the format of DD/MM/YY */
+
   }, {
     key: "formatDate",
-    value: function formatDate(dateTxt) {
-      var date = dateTxt.split(" ")[0].split("-");
+    value: function formatDate(dateData) {
+      var date = dateData.split(" ")[0].split("-");
       return "".concat(date[2], "/").concat(date[1], "/").concat(date[0]);
     }
-  }, {
-    key: "formatTime",
-    value: function formatTime(dateTxt) {
-      return _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(dateTxt.split(" ")[1].split(":")[0]);
-    }
+    /* Display forecast for 5 days according to the local system time */
+
   }, {
     key: "retrieveData",
     value: function retrieveData(data) {
@@ -9594,15 +9507,15 @@ function (_React$Component) {
         timeslot = "21:00:00";
       }
 
-      var json = data.filter(function (c) {
-        var time = c.dt_txt.split(" ")[1];
+      var jsonData = data.filter(function (data) {
+        var time = data.dt_txt.split(" ")[1];
 
         if (time === timeslot) {
-          return c;
+          return data;
         }
       });
       this.setState({
-        data: json
+        data: jsonData
       });
     }
   }, {
@@ -9625,22 +9538,19 @@ function (_React$Component) {
       var _this3 = this;
 
       var cards = "";
-      var id = 1;
 
       if (this.state.data) {
-        cards = this.state.data.map(function (c) {
-          return __jsx(_components_WeatherInfo__WEBPACK_IMPORTED_MODULE_12__["default"], {
-            key: id++,
-            time: _this3.formatTime(c.dt_txt),
-            date: _this3.formatDate(c.dt_txt),
-            maxTemp: c.main.temp_max,
-            minTemp: c.main.temp_min,
-            humidity: c.main.humidity,
-            description: c.weather[0].description,
-            icon: c.weather[0].icon,
+        cards = this.state.data.map(function (data) {
+          return __jsx(_components_WeatherInfo__WEBPACK_IMPORTED_MODULE_11__["default"], {
+            date: _this3.formatDate(data.dt_txt),
+            maxTemp: data.main.temp_max,
+            minTemp: data.main.temp_min,
+            humidity: data.main.humidity,
+            description: data.weather[0].description,
+            icon: data.weather[0].icon,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 114
+              lineNumber: 112
             },
             __self: this
           });
@@ -9650,31 +9560,31 @@ function (_React$Component) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 124
         },
         __self: this
-      }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_10___default.a, {
+      }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_9___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129
+          lineNumber: 125
         },
         __self: this
       }, __jsx("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 126
         },
         __self: this
-      }, "Weather Application")), __jsx(_components_SearchCity__WEBPACK_IMPORTED_MODULE_14__["default"], {
+      }, "Weather Application")), __jsx(_components_SearchCity__WEBPACK_IMPORTED_MODULE_13__["default"], {
         changeHandler: this.changeHandler,
         submitHandler: this.submitHandler,
         activeCity: this.state.activeCity,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 132
+          lineNumber: 128
         },
         __self: this
-      }), __jsx(_components_CurrentWeather__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      }), __jsx(_components_CurrentWeather__WEBPACK_IMPORTED_MODULE_12__["default"], {
         city: this.state.city,
         temperature: this.state.temperature,
         description: this.state.description,
@@ -9682,63 +9592,64 @@ function (_React$Component) {
         highTemp: this.state.highTemp,
         lowTemp: this.state.lowTemp,
         humidity: this.state.humidity,
+        country: this.state.country,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 137
+          lineNumber: 133
         },
         __self: this
       }), __jsx("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 143
         },
         __self: this
       }), __jsx("div", {
         className: "section",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 144
         },
         __self: this
       }, __jsx("div", {
         className: "container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148
+          lineNumber: 145
         },
         __self: this
       }, __jsx("div", {
         className: "columns",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149
+          lineNumber: 146
         },
         __self: this
       }, __jsx("div", {
         className: "column tile is-ancestor is-centered",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 147
         },
         __self: this
       }, __jsx("div", {
         className: "tile",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 151
+          lineNumber: 148
         },
         __self: this
       }, __jsx("div", {
         className: "tile is-child",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152
+          lineNumber: 149
         },
         __self: this
-      }, __jsx(react_grid_system__WEBPACK_IMPORTED_MODULE_11__["Row"], {
+      }, __jsx(react_grid_system__WEBPACK_IMPORTED_MODULE_10__["Row"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 150
         },
         __self: this
       }, cards))))))));
@@ -9746,13 +9657,13 @@ function (_React$Component) {
   }]);
 
   return Index;
-}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
 
 
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*******************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CYoh%20Zhi%20Ying%5CDesktop%5Cweather-app%5Cpages%5Cindex.js ***!
   \*******************************************************************************************************************************************/
@@ -9775,5 +9686,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js","styles"]]]);
+},[[2,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

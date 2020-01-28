@@ -8,7 +8,8 @@ const CurrentWeather = ({
   feels_like,
   humidity,
   highTemp,
-  lowTemp
+  lowTemp,
+  country
 }) => {
   return (
     <section className="hero is-info is-bold">
@@ -25,7 +26,7 @@ const CurrentWeather = ({
           {description}
         </h2>
         <h3 className="is-family-sans-serif has-text-dark has-text-centered">
-          {city}
+          {city}, {country}
         </h3>
         <h5 className="is-family-sans-serif has-text-centered">
           Feels like: {Math.round(feels_like)}&deg;C | Humidity: {humidity}

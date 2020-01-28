@@ -47,20 +47,19 @@ export default class Index extends React.Component {
         feels_like: detail.main.feels_like,
         humidity: detail.main.humidity,
         highTemp: detail.main.temp_max,
-        lowTemp: detail.main.temp_min
+        lowTemp: detail.main.temp_min,
+        country: detail.sys.country
       });
     });
   }
 
-  formatDate(dateTxt) {
-    let date = dateTxt.split(" ")[0].split("-");
+  /* Display date in the format of DD/MM/YY */
+  formatDate(dateData) {
+    let date = dateData.split(" ")[0].split("-");
     return `${date[2]}/${date[1]}/${date[0]}`;
   }
 
-  formatTime(dateTxt) {
-    return parseInt(dateTxt.split(" ")[1].split(":")[0]);
-  }
-
+  /* Display forecast for 5 days according to the local system time */
   retrieveData(data) {
     let date = new Date();
     let hours = date.getHours();
@@ -82,14 +81,14 @@ export default class Index extends React.Component {
     } else if (hours >= 21) {
       timeslot = "21:00:00";
     }
-    let json = data.filter(c => {
-      let time = c.dt_txt.split(" ")[1];
+    let jsonData = data.filter(data => {
+      let time = data.dt_txt.split(" ")[1];
       if (time === timeslot) {
-        return c;
+        return data;
       }
     });
     this.setState({
-      data: json
+      data: jsonData
     });
   }
 
@@ -107,19 +106,16 @@ export default class Index extends React.Component {
 
   render() {
     let cards = "";
-    let id = 1;
     if (this.state.data) {
-      cards = this.state.data.map(c => {
+      cards = this.state.data.map(data => {
         return (
           <WeatherInfo
-            key={id++}
-            time={this.formatTime(c.dt_txt)}
-            date={this.formatDate(c.dt_txt)}
-            maxTemp={c.main.temp_max}
-            minTemp={c.main.temp_min}
-            humidity={c.main.humidity}
-            description={c.weather[0].description}
-            icon={c.weather[0].icon}
+            date={this.formatDate(data.dt_txt)}
+            maxTemp={data.main.temp_max}
+            minTemp={data.main.temp_min}
+            humidity={data.main.humidity}
+            description={data.weather[0].description}
+            icon={data.weather[0].icon}
           />
         );
       });
@@ -142,6 +138,7 @@ export default class Index extends React.Component {
           highTemp={this.state.highTemp}
           lowTemp={this.state.lowTemp}
           humidity={this.state.humidity}
+          country={this.state.country}
         />
         <br />
         <div className="section">
