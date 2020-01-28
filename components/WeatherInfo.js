@@ -24,7 +24,7 @@ export default class WeatherInfo extends React.Component {
         <div>
           <h5 className="has-text-weight-semibold">
             Humidity:
-            <span className="is-normal">{this.props.humidity}</span>
+            <span className="is-normal">{this.props.humidity}%</span>
           </h5>
         </div>
         <div>

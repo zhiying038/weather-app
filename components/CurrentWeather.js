@@ -9,7 +9,8 @@ const CurrentWeather = ({
   humidity,
   highTemp,
   lowTemp,
-  country
+  country,
+  windspeed
 }) => {
   return (
     <section className="hero is-info is-bold">
@@ -29,7 +30,7 @@ const CurrentWeather = ({
           {city}, {country}
         </h3>
         <h5 className="is-family-sans-serif has-text-centered">
-          Feels like: {Math.round(feels_like)}&deg;C | Humidity: {humidity}
+          Feels like: {Math.round(feels_like)}&deg;C | Humidity: {humidity}%
         </h5>
         <div className="has-text-centered">
           <span className="is-family-sans-serif">
@@ -40,6 +41,9 @@ const CurrentWeather = ({
             {Math.round(highTemp)}&deg;C
           </span>
         </div>
+        <h5 className="is-family-sans-serif has-text-centered">
+          Windspeed: {windspeed}
+        </h5>
       </div>
     </section>
   );

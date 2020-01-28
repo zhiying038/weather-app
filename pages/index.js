@@ -48,7 +48,8 @@ export default class Index extends React.Component {
         humidity: detail.main.humidity,
         highTemp: detail.main.temp_max,
         lowTemp: detail.main.temp_min,
-        country: detail.sys.country
+        country: detail.sys.country,
+        windspeed: detail.wind.speed
       });
     });
   }
@@ -139,6 +140,7 @@ export default class Index extends React.Component {
           lowTemp={this.state.lowTemp}
           humidity={this.state.humidity}
           country={this.state.country}
+          windspeed={this.state.windspeed}
         />
         <br />
         <div className="section">
