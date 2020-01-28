@@ -1,12 +1,11 @@
 import React from "react";
 import axios from "axios";
 import Head from "next/head";
-import { Container, Row, Col } from "react-grid-system";
+import { Row } from "react-grid-system";
 import WeatherInfo from "../components/WeatherInfo";
 import CurrentWeather from "../components/CurrentWeather";
 import SearchCity from "../components/SearchCity";
 import "../styles/styles.scss";
-
 
 export default class Index extends React.Component {
   constructor(props) {
@@ -38,19 +37,19 @@ export default class Index extends React.Component {
         console.log(error);
       });
 
-      const weatherUrl = `${this.apiurl}/weather?q=${cityName}&units=metric&appid=${this.apikey}`;
-      axios.get(weatherUrl).then(res => {
-        const detail = res.data;
-        this.setState({
-          city: detail.name,
-          temperature: detail.main.temp,
-          description: detail.weather[0].description,
-          feels_like: detail.main.feels_like,
-          humidity: detail.main.humidity,
-          highTemp: detail.main.temp_max,
-          lowTemp: detail.main.temp_min
-        });
-      })
+    const weatherUrl = `${this.apiurl}/weather?q=${cityName}&units=metric&appid=${this.apikey}`;
+    axios.get(weatherUrl).then(res => {
+      const detail = res.data;
+      this.setState({
+        city: detail.name,
+        temperature: detail.main.temp,
+        description: detail.weather[0].description,
+        feels_like: detail.main.feels_like,
+        humidity: detail.main.humidity,
+        highTemp: detail.main.temp_max,
+        lowTemp: detail.main.temp_min
+      });
+    });
   }
 
   formatDate(dateTxt) {
@@ -130,12 +129,12 @@ export default class Index extends React.Component {
         <Head>
           <title>Weather Application</title>
         </Head>
-        <SearchCity 
+        <SearchCity
           changeHandler={this.changeHandler}
           submitHandler={this.submitHandler}
           activeCity={this.state.activeCity}
         />
-        <CurrentWeather 
+        <CurrentWeather
           city={this.state.city}
           temperature={this.state.temperature}
           description={this.state.description}
@@ -145,13 +144,19 @@ export default class Index extends React.Component {
           humidity={this.state.humidity}
         />
         <br />
-        <Container>
-          <Row>
-            <Col lg={12}>
-              <Row>{cards}</Row>
-            </Col>
-          </Row>
-        </Container>
+        <div className="section">
+          <div className="container">
+            <div className="columns">
+              <div className="column tile is-ancestor is-centered">
+                <div className="tile">
+                  <div className="tile is-child">
+                    <Row>{cards}</Row>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

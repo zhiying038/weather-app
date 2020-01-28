@@ -3,7 +3,7 @@ import "../styles/styles.scss";
 
 const SearchCity = ({ changeHandler, submitHandler, activeCity }) => {
   return (
-    <div className="field is-grouped centered" onSubmit={submitHandler}>
+    <div className="field is-grouped centered-search" onSubmit={submitHandler}>
       <div className="control">
         <input
           className="input"

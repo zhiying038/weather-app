@@ -228,7 +228,7 @@ const SearchCity = ({
   activeCity
 }) => {
   return __jsx("div", {
-    className: "field is-grouped centered",
+    className: "field is-grouped centered-search",
     onSubmit: submitHandler,
     __source: {
       fileName: _jsxFileName,
@@ -516,7 +516,7 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           icon: c.weather[0].icon,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 115
+            lineNumber: 114
           },
           __self: this
         });
@@ -526,19 +526,19 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 129
+        lineNumber: 128
       },
       __self: this
     }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 130
+        lineNumber: 129
       },
       __self: this
     }, __jsx("title", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 130
       },
       __self: this
     }, "Weather Application")), __jsx(_components_SearchCity__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -547,7 +547,7 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       activeCity: this.state.activeCity,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 133
+        lineNumber: 132
       },
       __self: this
     }), __jsx(_components_CurrentWeather__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -560,41 +560,64 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       humidity: this.state.humidity,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 138
+        lineNumber: 137
       },
       __self: this
     }), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
+        lineNumber: 146
+      },
+      __self: this
+    }), __jsx("div", {
+      className: "section",
+      __source: {
+        fileName: _jsxFileName,
         lineNumber: 147
       },
       __self: this
-    }), __jsx(react_grid_system__WEBPACK_IMPORTED_MODULE_3__["Container"], {
+    }, __jsx("div", {
+      className: "container",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 148
       },
       __self: this
-    }, __jsx(react_grid_system__WEBPACK_IMPORTED_MODULE_3__["Row"], {
+    }, __jsx("div", {
+      className: "columns",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 149
       },
       __self: this
-    }, __jsx(react_grid_system__WEBPACK_IMPORTED_MODULE_3__["Col"], {
-      lg: 12,
+    }, __jsx("div", {
+      className: "column tile is-ancestor is-centered",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 150
       },
       __self: this
-    }, __jsx(react_grid_system__WEBPACK_IMPORTED_MODULE_3__["Row"], {
+    }, __jsx("div", {
+      className: "tile",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 151
       },
       __self: this
-    }, cards)))));
+    }, __jsx("div", {
+      className: "tile is-child",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 152
+      },
+      __self: this
+    }, __jsx(react_grid_system__WEBPACK_IMPORTED_MODULE_3__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 153
+      },
+      __self: this
+    }, cards))))))));
   }
 
 }
