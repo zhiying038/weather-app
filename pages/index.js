@@ -4,6 +4,7 @@ import Head from "next/head";
 import { Container, Row, Col } from "react-grid-system";
 import WeatherInfo from "../components/WeatherInfo";
 import CurrentWeather from "../components/CurrentWeather";
+import SearchCity from "../components/SearchCity";
 import "../styles/styles.scss";
 
 
@@ -18,6 +19,8 @@ export default class Index extends React.Component {
     };
     this.APIRequest = this.APIRequest.bind(this);
     this.retrieveData = this.retrieveData.bind(this);
+    this.submitHandler = this.submitHandler.bind(this);
+    this.changeHandler = this.changeHandler.bind(this);
   }
 
   async componentDidMount() {
@@ -91,6 +94,18 @@ export default class Index extends React.Component {
     });
   }
 
+  submitHandler(input) {
+    input.preventDefault();
+    this.APIRequest(this.state.activeCity);
+  }
+
+  changeHandler(input) {
+    input.preventDefault();
+    this.setState({
+      activeCity: input.target.value
+    });
+  }
+
   render() {
     let cards = "";
     let id = 1;
@@ -115,6 +130,11 @@ export default class Index extends React.Component {
         <Head>
           <title>Weather Application</title>
         </Head>
+        <SearchCity 
+          changeHandler={this.changeHandler}
+          submitHandler={this.submitHandler}
+          activeCity={this.state.activeCity}
+        />
         <CurrentWeather 
           city={this.state.city}
           temperature={this.state.temperature}

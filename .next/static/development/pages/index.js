@@ -13,7 +13,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
 /* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\Yoh Zhi Ying\\Desktop\\React\\weather\\components\\CurrentWeather.js";
+var _jsxFileName = "C:\\Users\\Yoh Zhi Ying\\Desktop\\weather-app\\components\\CurrentWeather.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -110,6 +110,66 @@ var CurrentWeather = function CurrentWeather(_ref) {
 
 /***/ }),
 
+/***/ "./components/SearchCity.js":
+/*!**********************************!*\
+  !*** ./components/SearchCity.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Yoh Zhi Ying\\Desktop\\weather-app\\components\\SearchCity.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+var SearchCity = function SearchCity(_ref) {
+  var changeHandler = _ref.changeHandler,
+      submitHandler = _ref.submitHandler,
+      activeCity = _ref.activeCity;
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("form", {
+    onSubmit: submitHandler,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, __jsx("input", {
+    className: "input",
+    placeholder: "Enter City",
+    onChange: changeHandler,
+    value: activeCity,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }), __jsx("button", {
+    className: "button",
+    onClick: submitHandler,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, "Search")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SearchCity);
+
+/***/ }),
+
 /***/ "./components/WeatherInfo.js":
 /*!***********************************!*\
   !*** ./components/WeatherInfo.js ***!
@@ -136,7 +196,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Yoh Zhi Ying\\Desktop\\React\\weather\\components\\WeatherInfo.js";
+var _jsxFileName = "C:\\Users\\Yoh Zhi Ying\\Desktop\\weather-app\\components\\WeatherInfo.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 
@@ -5496,10 +5556,10 @@ module.exports = (__webpack_require__(/*! dll-reference dll_5f137288facb1107b491
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CYoh%20Zhi%20Ying%5CDesktop%5CReact%5Cweather%5Cpages%5Cindex.js!./":
-/*!*******************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CYoh%20Zhi%20Ying%5CDesktop%5CReact%5Cweather%5Cpages%5Cindex.js ***!
-  \*******************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CYoh%20Zhi%20Ying%5CDesktop%5Cweather-app%5Cpages%5Cindex.js!./":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CYoh%20Zhi%20Ying%5CDesktop%5Cweather-app%5Cpages%5Cindex.js ***!
+  \***************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9385,8 +9445,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_grid_system__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_grid_system__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _components_WeatherInfo__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/WeatherInfo */ "./components/WeatherInfo.js");
 /* harmony import */ var _components_CurrentWeather__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/CurrentWeather */ "./components/CurrentWeather.js");
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _components_SearchCity__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/SearchCity */ "./components/SearchCity.js");
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_15__);
 
 
 
@@ -9395,8 +9456,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Yoh Zhi Ying\\Desktop\\React\\weather\\pages\\index.js";
+var _jsxFileName = "C:\\Users\\Yoh Zhi Ying\\Desktop\\weather-app\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
+
 
 
 
@@ -9424,6 +9486,8 @@ function (_React$Component) {
     };
     _this.APIRequest = _this.APIRequest.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this));
     _this.retrieveData = _this.retrieveData.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this));
+    _this.submitHandler = _this.submitHandler.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this));
+    _this.changeHandler = _this.changeHandler.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this));
     return _this;
   }
 
@@ -9533,6 +9597,20 @@ function (_React$Component) {
       });
     }
   }, {
+    key: "submitHandler",
+    value: function submitHandler(input) {
+      input.preventDefault();
+      this.APIRequest(this.state.activeCity);
+    }
+  }, {
+    key: "changeHandler",
+    value: function changeHandler(input) {
+      input.preventDefault();
+      this.setState({
+        activeCity: input.target.value
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this3 = this;
@@ -9553,7 +9631,7 @@ function (_React$Component) {
             icon: c.weather[0].icon,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 100
+              lineNumber: 115
             },
             __self: this
           });
@@ -9563,22 +9641,31 @@ function (_React$Component) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 129
         },
         __self: this
       }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_10___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 130
         },
         __self: this
       }, __jsx("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 131
         },
         __self: this
-      }, "Weather Application")), __jsx(_components_CurrentWeather__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      }, "Weather Application")), __jsx(_components_SearchCity__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        changeHandler: this.changeHandler,
+        submitHandler: this.submitHandler,
+        activeCity: this.state.activeCity,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 133
+        },
+        __self: this
+      }), __jsx(_components_CurrentWeather__WEBPACK_IMPORTED_MODULE_13__["default"], {
         city: this.state.city,
         temperature: this.state.temperature,
         description: this.state.description,
@@ -9588,38 +9675,38 @@ function (_React$Component) {
         humidity: this.state.humidity,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 138
         },
         __self: this
       }), __jsx("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 147
         },
         __self: this
       }), __jsx(react_grid_system__WEBPACK_IMPORTED_MODULE_11__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 148
         },
         __self: this
       }, __jsx(react_grid_system__WEBPACK_IMPORTED_MODULE_11__["Row"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129
+          lineNumber: 149
         },
         __self: this
       }, __jsx(react_grid_system__WEBPACK_IMPORTED_MODULE_11__["Col"], {
         lg: 12,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 150
         },
         __self: this
       }, __jsx(react_grid_system__WEBPACK_IMPORTED_MODULE_11__["Row"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 131
+          lineNumber: 151
         },
         __self: this
       }, cards)))));
@@ -9634,13 +9721,13 @@ function (_React$Component) {
 /***/ }),
 
 /***/ 1:
-/*!***********************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CYoh%20Zhi%20Ying%5CDesktop%5CReact%5Cweather%5Cpages%5Cindex.js ***!
-  \***********************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CYoh%20Zhi%20Ying%5CDesktop%5Cweather-app%5Cpages%5Cindex.js ***!
+  \*******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CYoh%20Zhi%20Ying%5CDesktop%5CReact%5Cweather%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CYoh%20Zhi%20Ying%5CDesktop%5CReact%5Cweather%5Cpages%5Cindex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CYoh%20Zhi%20Ying%5CDesktop%5Cweather-app%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CYoh%20Zhi%20Ying%5CDesktop%5Cweather-app%5Cpages%5Cindex.js!./");
 
 
 /***/ }),
