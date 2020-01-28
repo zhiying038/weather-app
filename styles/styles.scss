@@ -1,5 +1,12 @@
 @charset 'utf-8';
 
+.centered {
+    top: 10px;
+    width: 200px;
+    position: absolute;
+    left: calc(50% - 150px);
+}
+
 .weather-info {
     border: 1px solid #cccccc;
     padding: 10px;

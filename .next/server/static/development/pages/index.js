@@ -121,7 +121,7 @@ const CurrentWeather = ({
   lowTemp
 }) => {
   return __jsx("section", {
-    className: "hero is-light",
+    className: "hero is-info is-bold",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -149,7 +149,7 @@ const CurrentWeather = ({
     },
     __self: undefined
   }, __jsx("h1", {
-    className: "is-size-3 has-text-centered is-family-sans-serif has-text-weight-semibold has-text-black",
+    className: "is-size-3 has-text-centered is-family-sans-serif subtitle has-text-black",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
@@ -228,13 +228,15 @@ const SearchCity = ({
   activeCity
 }) => {
   return __jsx("div", {
+    className: "field is-grouped centered",
+    onSubmit: submitHandler,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: undefined
-  }, __jsx("form", {
-    onSubmit: submitHandler,
+  }, __jsx("div", {
+    className: "control",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -250,12 +252,19 @@ const SearchCity = ({
       lineNumber: 8
     },
     __self: undefined
-  }), __jsx("button", {
-    className: "button",
+  })), __jsx("div", {
+    className: "control",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }, __jsx("a", {
+    className: "button is-dark",
     onClick: submitHandler,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 16
     },
     __self: undefined
   }, "Search")));

@@ -11,13 +11,13 @@ const CurrentWeather = ({
   lowTemp
 }) => {
   return (
-    <section className="hero is-light">
+    <section className="hero is-info is-bold">
       <div className="hero-body">
         <h1 className="has-text-centered is-family-sans-serif has-text-weight-bold has-text-black is-size-2">
           Current Weather
         </h1>
         <div className="container">
-          <h1 className="is-size-3 has-text-centered is-family-sans-serif has-text-weight-semibold has-text-black">
+          <h1 className="is-size-3 has-text-centered is-family-sans-serif subtitle has-text-black">
             {Math.round(temperature)}&deg;C
           </h1>
         </div>
