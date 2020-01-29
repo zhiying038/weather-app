@@ -4,9 +4,11 @@
   position: absolute;
   left: calc(50% - 150px); }
 
-.centered-tile {
-  margin-left: auto;
-  margin-right: auto; }
+.centered-toggle-unit {
+  top: 10px;
+  width: 200px;
+  position: absolute;
+  left: calc(50% - 75px); }
 
 .weather-info {
   border: 1px solid #cccccc;
@@ -14,7 +16,7 @@
   padding: 10px;
   margin-left: auto;
   margin-right: 40px;
-  margin-top: -50px;
+  margin-top: -30px;
   margin-bottom: -25px;
   height: 250px;
   overflow: hidden; }

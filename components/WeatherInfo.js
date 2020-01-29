@@ -18,8 +18,14 @@ export default class WeatherInfo extends React.Component {
           </span>
         </div>
         <div>
-          <span>{Math.round(this.props.minTemp)}&deg;</span> /{" "}
-          <span>{Math.round(this.props.maxTemp)}&deg;C</span>
+          <span>
+            {this.props.unit === "metric"
+              ? Math.round(this.props.maxTemp) + "°C"
+              : Math.round((this.props.maxTemp * 9) / 5 + 32) + "°F"}
+          </span>{" "}
+          / <span>{this.props.unit === "metric"
+              ? Math.round(this.props.minTemp) + "°C"
+              : Math.round((this.props.minTemp * 9) / 5 + 32) + "°F"}</span>
         </div>
         <div>
           <h5 className="has-text-weight-semibold">

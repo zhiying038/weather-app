@@ -120,90 +120,93 @@ const CurrentWeather = ({
   highTemp,
   lowTemp,
   country,
-  windspeed
+  windspeed,
+  unit
 }) => {
+  const metric = Math.round(temperature);
+  const imperial = Math.round(temperature * 9 / 5 + 32);
   return __jsx("section", {
     className: "hero is-info is-bold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 19
     },
     __self: undefined
   }, __jsx("div", {
     className: "hero-body",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 20
     },
     __self: undefined
   }, __jsx("h1", {
     className: "has-text-centered is-family-sans-serif has-text-weight-bold has-text-black is-size-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 21
     },
     __self: undefined
   }, "Current Weather"), __jsx("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 24
     },
     __self: undefined
   }, __jsx("h1", {
     className: "is-size-3 has-text-centered is-family-sans-serif subtitle has-text-black",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 25
     },
     __self: undefined
-  }, Math.round(temperature), "\xB0C")), __jsx("h2", {
+  }, unit === "metric" ? metric + "°C" : imperial + "°F")), __jsx("h2", {
     className: "is-size-4 is-capitalized has-text-centered is-family-sans-serif has-text-weight-medium has-text-black",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 29
     },
     __self: undefined
   }, description), __jsx("h3", {
     className: "is-family-sans-serif has-text-dark has-text-centered",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 32
     },
     __self: undefined
   }, city, ", ", country), __jsx("h5", {
     className: "is-family-sans-serif has-text-centered",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 35
     },
     __self: undefined
-  }, "Feels like: ", Math.round(feels_like), "\xB0C | Humidity: ", humidity, "%"), __jsx("div", {
+  }, "Feels like: ", unit === "metric" ? Math.round(feels_like) + "°C" : Math.round(feels_like * 9 / 5 + 32) + "°F", " | Humidity: ", humidity, "%"), __jsx("div", {
     className: "has-text-centered",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 38
     },
     __self: undefined
   }, __jsx("span", {
     className: "is-family-sans-serif",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 39
     },
     __self: undefined
-  }, Math.round(lowTemp), "\xB0"), " ", "/", " ", __jsx("span", {
+  }, unit === "metric" ? Math.round(highTemp) + "°C" : Math.round(highTemp * 9 / 5 + 32) + "°F"), " ", "/", " ", __jsx("span", {
     className: "is-family-sans-serif",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 43
     },
     __self: undefined
-  }, Math.round(highTemp), "\xB0C")), __jsx("h5", {
+  }, unit === "metric" ? Math.round(lowTemp) + "°C" : Math.round(lowTemp * 9 / 5 + 32) + "°F")), __jsx("h5", {
     className: "is-family-sans-serif has-text-centered",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 47
     },
     __self: undefined
   }, "Windspeed: ", windspeed)));
@@ -224,8 +227,8 @@ const CurrentWeather = ({
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "C:\\Users\\Yoh Zhi Ying\\Desktop\\weather-app\\components\\SearchCity.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -235,51 +238,125 @@ const SearchCity = ({
   changeHandler,
   submitHandler,
   activeCity
-}) => {
-  return __jsx("div", {
-    className: "field is-grouped centered-search",
-    onSubmit: submitHandler,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "control",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: undefined
-  }, __jsx("input", {
-    className: "input",
-    placeholder: "Enter City",
-    onChange: changeHandler,
-    value: activeCity,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: undefined
-  })), __jsx("div", {
-    className: "control",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: undefined
-  }, __jsx("a", {
-    className: "button is-dark",
-    onClick: submitHandler,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: undefined
-  }, "Search")));
-};
+}) => __jsx("div", {
+  className: "field is-grouped centered-search",
+  onSubmit: submitHandler,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 5
+  },
+  __self: undefined
+}, __jsx("div", {
+  className: "control",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 6
+  },
+  __self: undefined
+}, __jsx("input", {
+  className: "input",
+  placeholder: "Enter City",
+  onChange: changeHandler,
+  value: activeCity,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7
+  },
+  __self: undefined
+})), __jsx("div", {
+  className: "control",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 14
+  },
+  __self: undefined
+}, __jsx("a", {
+  className: "button is-dark",
+  onClick: submitHandler,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 15
+  },
+  __self: undefined
+}, "Search")));
 
 /* harmony default export */ __webpack_exports__["default"] = (SearchCity);
+
+/***/ }),
+
+/***/ "./components/UnitToggle.js":
+/*!**********************************!*\
+  !*** ./components/UnitToggle.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Yoh Zhi Ying\\Desktop\\weather-app\\components\\UnitToggle.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const UnitToggle = ({
+  toggleUnit,
+  unit
+}) => __jsx("div", {
+  className: "control centered-toggle-unit",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 5
+  },
+  __self: undefined
+}, __jsx("label", {
+  className: "radio",
+  htmlFor: "celsius",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 6
+  },
+  __self: undefined
+}, __jsx("input", {
+  className: "is-radio",
+  type: "radio",
+  id: "celsius",
+  name: "celsius",
+  value: "metric",
+  checked: unit === "metric",
+  onChange: toggleUnit,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7
+  },
+  __self: undefined
+}), "Celsius"), __jsx("label", {
+  className: "radio",
+  htmlFor: "fahrenheit",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18
+  },
+  __self: undefined
+}, __jsx("input", {
+  className: "is-radio",
+  type: "radio",
+  id: "fahrenehit",
+  name: "fahrenheit",
+  value: "fahrenheit",
+  checked: unit === "imperial",
+  onChange: toggleUnit,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 19
+  },
+  __self: undefined
+}), "Fahrenheit"));
+
+/* harmony default export */ __webpack_exports__["default"] = (UnitToggle);
 
 /***/ }),
 
@@ -353,33 +430,13 @@ class WeatherInfo extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component
         lineNumber: 21
       },
       __self: this
-    }, Math.round(this.props.minTemp), "\xB0"), " /", " ", __jsx("span", {
+    }, this.props.unit === "metric" ? Math.round(this.props.maxTemp) + "°C" : Math.round(this.props.maxTemp * 9 / 5 + 32) + "°F"), " ", "/ ", __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 26
       },
       __self: this
-    }, Math.round(this.props.maxTemp), "\xB0C")), __jsx("div", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24
-      },
-      __self: this
-    }, __jsx("h5", {
-      className: "has-text-weight-semibold",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25
-      },
-      __self: this
-    }, "Humidity:", __jsx("span", {
-      className: "is-normal",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 27
-      },
-      __self: this
-    }, this.props.humidity, "%"))), __jsx("div", {
+    }, this.props.unit === "metric" ? Math.round(this.props.minTemp) + "°C" : Math.round(this.props.minTemp * 9 / 5 + 32) + "°F")), __jsx("div", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 30
@@ -392,11 +449,31 @@ class WeatherInfo extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component
         lineNumber: 31
       },
       __self: this
+    }, "Humidity:", __jsx("span", {
+      className: "is-normal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    }, this.props.humidity, "%"))), __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, __jsx("h5", {
+      className: "has-text-weight-semibold",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
     }, "Weather: "), __jsx("p", {
       className: "is-capitalized",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 38
       },
       __self: this
     }, this.props.description)));
@@ -427,8 +504,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_WeatherInfo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/WeatherInfo */ "./components/WeatherInfo.js");
 /* harmony import */ var _components_CurrentWeather__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/CurrentWeather */ "./components/CurrentWeather.js");
 /* harmony import */ var _components_SearchCity__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/SearchCity */ "./components/SearchCity.js");
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_UnitToggle__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/UnitToggle */ "./components/UnitToggle.js");
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/styles.scss */ "./styles/styles.scss");
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_8__);
 var _jsxFileName = "C:\\Users\\Yoh Zhi Ying\\Desktop\\weather-app\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -439,33 +517,38 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
+const WEATHER_API_KEY = "b71deb2566d82e77a5e670d0d3771d2a";
+const WEATHER_API_URL = "http://api.openweathermap.org/data/2.5";
 class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   constructor(props) {
     super(props);
-    this.apikey = "b71deb2566d82e77a5e670d0d3771d2a";
-    this.apiurl = "http://api.openweathermap.org/data/2.5";
     this.state = {
       activeCity: "Kuala Lumpur",
+      unit: "metric",
       data: null
     };
     this.APIRequest = this.APIRequest.bind(this);
     this.retrieveData = this.retrieveData.bind(this);
     this.submitHandler = this.submitHandler.bind(this);
     this.changeHandler = this.changeHandler.bind(this);
-  }
+    this.toggleUnit = this.toggleUnit.bind(this);
+  } // Mount original city
+
 
   async componentDidMount() {
     await this.APIRequest(this.state.activeCity);
-  }
+  } // OpenWeatherMap API request
+
 
   async APIRequest(cityName) {
-    const forecastUrl = `${this.apiurl}/forecast?q=${cityName}&units=metric&appid=${this.apikey}`;
+    const forecastUrl = `${WEATHER_API_URL}/forecast?q=${cityName}&units=${this.state.unit}&appid=${WEATHER_API_KEY}`;
     await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(forecastUrl).then(res => {
       this.retrieveData(res.data.list);
     }).catch(error => {
       console.log(error);
     });
-    const weatherUrl = `${this.apiurl}/weather?q=${cityName}&units=metric&appid=${this.apikey}`;
+    const weatherUrl = `${WEATHER_API_URL}/weather?q=${cityName}&units=${this.state.unit}&appid=${WEATHER_API_KEY}`;
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(weatherUrl).then(res => {
       const detail = res.data;
       this.setState({
@@ -477,7 +560,7 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
         highTemp: detail.main.temp_max,
         lowTemp: detail.main.temp_min,
         country: detail.sys.country,
-        windspeed: detail.wind.speed
+        windspeed: `${detail.wind.speed} ${this.state.unit === "metric" ? "m/s" : "mph"}`
       });
     });
   }
@@ -488,7 +571,7 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     let date = dateData.split(" ")[0].split("-");
     return `${date[2]}/${date[1]}/${date[0]}`;
   }
-  /* Display forecast for 5 days according to the local system time */
+  /* Display forecast for 5 days according to the current local system time */
 
 
   retrieveData(data) {
@@ -526,6 +609,18 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     });
   }
 
+  toggleUnit() {
+    if (this.state.unit === "metric") {
+      this.setState({
+        unit: "imperial"
+      });
+    } else {
+      this.setState({
+        unit: "metric"
+      });
+    }
+  }
+
   submitHandler(input) {
     input.preventDefault();
     this.APIRequest(this.state.activeCity);
@@ -540,19 +635,22 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
   render() {
     let cards = "";
+    let id = 1;
 
     if (this.state.data) {
       cards = this.state.data.map(data => {
         return __jsx(_components_WeatherInfo__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          key: id++,
           date: this.formatDate(data.dt_txt),
           maxTemp: data.main.temp_max,
           minTemp: data.main.temp_min,
           humidity: data.main.humidity,
           description: data.weather[0].description,
           icon: data.weather[0].icon,
+          unit: this.state.unit,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 113
+            lineNumber: 134
           },
           __self: this
         });
@@ -562,19 +660,19 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 125
+        lineNumber: 148
       },
       __self: this
     }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 126
+        lineNumber: 149
       },
       __self: this
     }, __jsx("title", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127
+        lineNumber: 150
       },
       __self: this
     }, "Weather Application")), __jsx(_components_SearchCity__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -583,7 +681,7 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       activeCity: this.state.activeCity,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 129
+        lineNumber: 152
       },
       __self: this
     }), __jsx(_components_CurrentWeather__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -596,63 +694,72 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       humidity: this.state.humidity,
       country: this.state.country,
       windspeed: this.state.windspeed,
+      unit: this.state.unit,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 134
+        lineNumber: 157
+      },
+      __self: this
+    }), __jsx(_components_UnitToggle__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      toggleUnit: this.toggleUnit,
+      unit: this.state.unit,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 169
       },
       __self: this
     }), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 145
+        lineNumber: 173
       },
       __self: this
     }), __jsx("div", {
       className: "section",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 146
+        lineNumber: 174
       },
       __self: this
     }, __jsx("div", {
       className: "container",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147
+        lineNumber: 175
       },
       __self: this
     }, __jsx("div", {
       className: "columns",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 148
+        lineNumber: 176
       },
       __self: this
     }, __jsx("div", {
       className: "column tile is-ancestor is-centered",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 149
+        lineNumber: 177
       },
       __self: this
     }, __jsx("div", {
       className: "tile",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 150
+        lineNumber: 178
       },
       __self: this
     }, __jsx("div", {
       className: "tile is-child",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151
+        lineNumber: 179
       },
       __self: this
     }, __jsx(react_grid_system__WEBPACK_IMPORTED_MODULE_3__["Row"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 152
+        lineNumber: 180
       },
       __self: this
     }, cards))))))));

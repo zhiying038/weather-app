@@ -10,8 +10,11 @@ const CurrentWeather = ({
   highTemp,
   lowTemp,
   country,
-  windspeed
+  windspeed,
+  unit
 }) => {
+  const metric = Math.round(temperature);
+  const imperial = Math.round((temperature * 9/5) + 32);
   return (
     <section className="hero is-info is-bold">
       <div className="hero-body">
@@ -20,7 +23,7 @@ const CurrentWeather = ({
         </h1>
         <div className="container">
           <h1 className="is-size-3 has-text-centered is-family-sans-serif subtitle has-text-black">
-            {Math.round(temperature)}&deg;C
+            {unit === "metric" ? metric + "°C" : imperial + "°F"}
           </h1>
         </div>
         <h2 className="is-size-4 is-capitalized has-text-centered is-family-sans-serif has-text-weight-medium has-text-black">
@@ -30,15 +33,15 @@ const CurrentWeather = ({
           {city}, {country}
         </h3>
         <h5 className="is-family-sans-serif has-text-centered">
-          Feels like: {Math.round(feels_like)}&deg;C | Humidity: {humidity}%
+          Feels like: {unit === "metric" ? Math.round(feels_like) + "°C" : Math.round((feels_like * 9/5) + 32) + "°F"} | Humidity: {humidity}%
         </h5>
         <div className="has-text-centered">
           <span className="is-family-sans-serif">
-            {Math.round(lowTemp)}&deg;
+            {unit === "metric" ? Math.round(highTemp) + "°C" : Math.round((highTemp * 9/5) + 32) + "°F"}
           </span>{" "}
           /{" "}
           <span className="is-family-sans-serif">
-            {Math.round(highTemp)}&deg;C
+          {unit === "metric" ? Math.round(lowTemp) + "°C" : Math.round((lowTemp * 9/5) + 32) + "°F"}
           </span>
         </div>
         <h5 className="is-family-sans-serif has-text-centered">
