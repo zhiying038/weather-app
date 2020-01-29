@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 import { Col } from "react-grid-system";
 import "../styles/styles.scss";
 
@@ -10,6 +11,7 @@ export default class WeatherInfo extends React.Component {
         className="has-text-centered is-family-sans-serif weather-info"
       >
         <div className="is-size-6 has-text-weight-bold">{this.props.date}</div>
+        <h5>{moment(this.props.day).format("dddd")}</h5>
         <div className="weather-icon">
           <span>
             <img

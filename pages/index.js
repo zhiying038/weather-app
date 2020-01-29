@@ -26,6 +26,8 @@ export default class Index extends React.Component {
     this.submitHandler = this.submitHandler.bind(this);
     this.changeHandler = this.changeHandler.bind(this);
     this.toggleUnit = this.toggleUnit.bind(this);
+    this.getDay = this.getDay.bind(this);
+    this.formatDate = this.formatDate.bind(this);
   }
 
   // Mount original city
@@ -62,17 +64,24 @@ export default class Index extends React.Component {
     });
   }
 
-  /* Display date in the format of DD/MM/YY */
+  /* Display date in the format of DD/MM/YYYY */
   formatDate(dateData) {
     let date = dateData.split(" ")[0].split("-");
     return `${date[2]}/${date[1]}/${date[0]}`;
   }
 
+  // Display the week's day for weather forecast
+  getDay(date) {
+    let newDate = new Date();
+    const weekday = date * 1000;
+    return newDate.setTime(weekday);
+  }
+
   /* Display weather forecast for the next five days. To simplify it, only the weather at 12 noon
      will be displayed. */
   retrieveData(data) {
-    const forecastData = data.filter(reading =>
-      reading.dt_txt.includes("12:00:00")
+    const forecastData = data.filter(weatherData =>
+      weatherData.dt_txt.includes("12:00:00")
     );
     this.setState({
       forecast: forecastData
@@ -113,6 +122,7 @@ export default class Index extends React.Component {
           <WeatherInfo
             key={id++}
             date={this.formatDate(data.dt_txt)}
+            day={this.getDay(data.dt)}
             maxTemp={data.main.temp_max}
             minTemp={data.main.temp_min}
             humidity={data.main.humidity}
