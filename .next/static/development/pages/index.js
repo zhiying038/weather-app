@@ -115,7 +115,7 @@ var CurrentWeather = function CurrentWeather(_ref) {
       lineNumber: 47
     },
     __self: this
-  }, "Windspeed: ", windspeed)));
+  }, "Windspeed: ", unit === "metric" ? windspeed + " m/s" : (windspeed * 2.237).toFixed(1) + " mph")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (CurrentWeather);
@@ -143,7 +143,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var SearchCity = function SearchCity(_ref) {
   var changeHandler = _ref.changeHandler,
       submitHandler = _ref.submitHandler,
-      activeCity = _ref.activeCity;
+      activeCity = _ref.activeCity,
+      keyPressHandler = _ref.keyPressHandler;
   return __jsx("div", {
     className: "field is-grouped centered-search",
     onSubmit: submitHandler,
@@ -163,7 +164,7 @@ var SearchCity = function SearchCity(_ref) {
     className: "input",
     placeholder: "Enter City",
     onChange: changeHandler,
-    value: activeCity,
+    onKeyPress: keyPressHandler,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -9495,7 +9496,7 @@ function (_React$Component) {
     _this.state = {
       activeCity: "Kuala Lumpur",
       unit: "metric",
-      data: null
+      forecast: null
     };
     _this.APIRequest = _this.APIRequest.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this));
     _this.retrieveData = _this.retrieveData.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this));
@@ -9556,7 +9557,7 @@ function (_React$Component) {
                   highTemp: detail.main.temp_max,
                   lowTemp: detail.main.temp_min,
                   country: detail.sys.country,
-                  windspeed: "".concat(detail.wind.speed, " ").concat(_this2.state.unit === "metric" ? "m/s" : "mph")
+                  windspeed: detail.wind.speed
                 });
               });
 
@@ -9575,44 +9576,20 @@ function (_React$Component) {
       var date = dateData.split(" ")[0].split("-");
       return "".concat(date[2], "/").concat(date[1], "/").concat(date[0]);
     }
-    /* Display forecast for 5 days according to the current local system time */
+    /* Display weather forecast for the next five days. To simplify it, only the weather at 12 noon
+       will be displayed. */
 
   }, {
     key: "retrieveData",
     value: function retrieveData(data) {
-      var date = new Date();
-      var hours = date.getHours();
-      var timeslot = "";
-
-      if (hours >= 0 && hours < 3) {
-        timeslot = "00:00:00";
-      } else if (hours >= 3 && hours < 6) {
-        timeslot = "03:00:00";
-      } else if (hours >= 6 && hours < 9) {
-        timeslot = "06:00:00";
-      } else if (hours >= 9 && hours < 12) {
-        timeslot = "09:00:00";
-      } else if (hours >= 12 && hours < 15) {
-        timeslot = "12:00:00";
-      } else if (hours >= 15 && hours < 18) {
-        timeslot = "15:00:00";
-      } else if (hours >= 18 && hours < 21) {
-        timeslot = "18:00:00";
-      } else if (hours >= 21) {
-        timeslot = "21:00:00";
-      }
-
-      var jsonData = data.filter(function (data) {
-        var time = data.dt_txt.split(" ")[1];
-
-        if (time === timeslot) {
-          return data;
-        }
+      var forecastData = data.filter(function (reading) {
+        return reading.dt_txt.includes("12:00:00");
       });
       this.setState({
-        data: jsonData
+        forecast: forecastData
       });
-    }
+    } // Change Celsius to Fahrenheit and vice versa
+
   }, {
     key: "toggleUnit",
     value: function toggleUnit() {
@@ -9648,8 +9625,8 @@ function (_React$Component) {
       var cards = "";
       var id = 1;
 
-      if (this.state.data) {
-        cards = this.state.data.map(function (data) {
+      if (this.state.forecast) {
+        cards = this.state.forecast.map(function (data) {
           return __jsx(_components_WeatherInfo__WEBPACK_IMPORTED_MODULE_11__["default"], {
             key: id++,
             date: _this3.formatDate(data.dt_txt),
@@ -9661,7 +9638,7 @@ function (_React$Component) {
             unit: _this3.state.unit,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 134
+              lineNumber: 113
             },
             __self: this
           });
@@ -9671,19 +9648,19 @@ function (_React$Component) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148
+          lineNumber: 127
         },
         __self: this
       }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_9___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149
+          lineNumber: 128
         },
         __self: this
       }, __jsx("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 129
         },
         __self: this
       }, "Weather Application")), __jsx(_components_SearchCity__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -9692,7 +9669,7 @@ function (_React$Component) {
         activeCity: this.state.activeCity,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152
+          lineNumber: 131
         },
         __self: this
       }), __jsx(_components_CurrentWeather__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -9708,7 +9685,7 @@ function (_React$Component) {
         unit: this.state.unit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 157
+          lineNumber: 136
         },
         __self: this
       }), __jsx(_components_UnitToggle__WEBPACK_IMPORTED_MODULE_14__["default"], {
@@ -9716,61 +9693,61 @@ function (_React$Component) {
         unit: this.state.unit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 169
+          lineNumber: 148
         },
         __self: this
       }), __jsx("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 173
+          lineNumber: 149
         },
         __self: this
       }), __jsx("div", {
         className: "section",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 174
+          lineNumber: 150
         },
         __self: this
       }, __jsx("div", {
         className: "container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 175
+          lineNumber: 151
         },
         __self: this
       }, __jsx("div", {
         className: "columns",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 176
+          lineNumber: 152
         },
         __self: this
       }, __jsx("div", {
         className: "column tile is-ancestor is-centered",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 177
+          lineNumber: 153
         },
         __self: this
       }, __jsx("div", {
         className: "tile",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 178
+          lineNumber: 154
         },
         __self: this
       }, __jsx("div", {
         className: "tile is-child",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 179
+          lineNumber: 155
         },
         __self: this
       }, __jsx(react_grid_system__WEBPACK_IMPORTED_MODULE_10__["Row"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 180
+          lineNumber: 156
         },
         __self: this
       }, cards))))))));

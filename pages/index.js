@@ -19,7 +19,7 @@ export default class Index extends React.Component {
     this.state = {
       activeCity: "Kuala Lumpur",
       unit: "metric",
-      data: null
+      forecast: null
     };
     this.APIRequest = this.APIRequest.bind(this);
     this.retrieveData = this.retrieveData.bind(this);
@@ -57,7 +57,7 @@ export default class Index extends React.Component {
         highTemp: detail.main.temp_max,
         lowTemp: detail.main.temp_min,
         country: detail.sys.country,
-        windspeed: `${detail.wind.speed} ${this.state.unit === "metric" ? "m/s" : "mph"}`,
+        windspeed: detail.wind.speed
       });
     });
   }
@@ -68,41 +68,20 @@ export default class Index extends React.Component {
     return `${date[2]}/${date[1]}/${date[0]}`;
   }
 
-  /* Display forecast for 5 days according to the current local system time */
+  /* Display weather forecast for the next five days. To simplify it, only the weather at 12 noon
+     will be displayed. */
   retrieveData(data) {
-    let date = new Date();
-    let hours = date.getHours();
-    let timeslot = "";
-    if (hours >= 0 && hours < 3) {
-      timeslot = "00:00:00";
-    } else if (hours >= 3 && hours < 6) {
-      timeslot = "03:00:00";
-    } else if (hours >= 6 && hours < 9) {
-      timeslot = "06:00:00";
-    } else if (hours >= 9 && hours < 12) {
-      timeslot = "09:00:00";
-    } else if (hours >= 12 && hours < 15) {
-      timeslot = "12:00:00";
-    } else if (hours >= 15 && hours < 18) {
-      timeslot = "15:00:00";
-    } else if (hours >= 18 && hours < 21) {
-      timeslot = "18:00:00";
-    } else if (hours >= 21) {
-      timeslot = "21:00:00";
-    }
-    let jsonData = data.filter(data => {
-      let time = data.dt_txt.split(" ")[1];
-      if (time === timeslot) {
-        return data;
-      }
-    });
+    const forecastData = data.filter(reading =>
+      reading.dt_txt.includes("12:00:00")
+    );
     this.setState({
-      data: jsonData
+      forecast: forecastData
     });
   }
 
+  // Change Celsius to Fahrenheit and vice versa
   toggleUnit() {
-    if ((this.state.unit) === "metric") {
+    if (this.state.unit === "metric") {
       this.setState({
         unit: "imperial"
       });
@@ -127,9 +106,9 @@ export default class Index extends React.Component {
 
   render() {
     let cards = "";
-    let id=1;
-    if (this.state.data) {
-      cards = this.state.data.map(data => {
+    let id = 1;
+    if (this.state.forecast) {
+      cards = this.state.forecast.map(data => {
         return (
           <WeatherInfo
             key={id++}
@@ -166,10 +145,7 @@ export default class Index extends React.Component {
           windspeed={this.state.windspeed}
           unit={this.state.unit}
         />
-        <UnitToggle 
-          toggleUnit={this.toggleUnit}
-          unit={this.state.unit}
-        />
+        <UnitToggle toggleUnit={this.toggleUnit} unit={this.state.unit} />
         <br />
         <div className="section">
           <div className="container">

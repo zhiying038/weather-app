@@ -9,5 +9,5 @@ The web application has been developed using the following technologies and API:
   - Bulma
   - OpenWeatherMap API
 
-![app-screenshot](bin/weather-app.png)
+![app-screenshot](bin/weather-interface.png)
   

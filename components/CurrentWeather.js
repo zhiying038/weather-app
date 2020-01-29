@@ -45,7 +45,7 @@ const CurrentWeather = ({
           </span>
         </div>
         <h5 className="is-family-sans-serif has-text-centered">
-          Windspeed: {windspeed}
+          Windspeed: {unit === "metric" ? windspeed + " m/s" : (windspeed * 2.237).toFixed(1) + " mph"}
         </h5>
       </div>
     </section>

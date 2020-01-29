@@ -1,14 +1,14 @@
 import React from "react";
 import "../styles/styles.scss";
 
-const SearchCity = ({ changeHandler, submitHandler, activeCity }) => (
+const SearchCity = ({ changeHandler, submitHandler, activeCity, keyPressHandler }) => (
   <div className="field is-grouped centered-search" onSubmit={submitHandler}>
     <div className="control">
       <input
         className="input"
         placeholder="Enter City"
         onChange={changeHandler}
-        value={activeCity}
+        onKeyPress={keyPressHandler}
       />
     </div>
     <div className="control">
