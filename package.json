@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.2",
     "bulma": "^0.8.0",
     "dotenv": "^8.2.0",
     "moment": "^2.24.0",
